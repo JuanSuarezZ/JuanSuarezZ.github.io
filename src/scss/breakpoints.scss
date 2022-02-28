@@ -1,0 +1,21 @@
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$xxxl: 1700px;
+$xxxxl: 1820px;
+$xxxxxl: 2100px;
+
+$grid-breakpoints: (
+  xs: $xs,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  xxl: $xxl,
+  xxxl: $xxxl,
+  xxxxl: $xxxxl,
+  xxxxxl: $xxxxxl,
+);
