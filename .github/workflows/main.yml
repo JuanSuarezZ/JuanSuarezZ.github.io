@@ -1,0 +1,41 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main # o el nombre de tu rama principal
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '2.8.0' # o la versión que estés utilizando
+
+    - name: Get dependencies
+      run: flutter pub get
+
+    - name: Build Web
+      run: flutter build web
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        publish_dir: build/web
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        user_name: GitHub Actions
+        user_email: actions@github.com
+        publish_branch: gh-pages
