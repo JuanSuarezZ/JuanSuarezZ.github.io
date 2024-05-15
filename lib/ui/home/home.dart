@@ -17,9 +17,12 @@ class _Body extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: Text("altura: ${size.height} - ancho: ${size.width}"),
+      // appBar: AppBar(),
+      body: Container(
+        color: Colors.blue,
+        child: Center(
+          child: Text("altura: ${size.height} - ancho: ${size.width}"),
+        ),
       ),
     );
   }
