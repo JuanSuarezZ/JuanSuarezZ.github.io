@@ -7,7 +7,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Flutter App Web',
+      title: 'Flutter App Web test',
       routerConfig: router,
       debugShowCheckedModeBanner: false,
     );
